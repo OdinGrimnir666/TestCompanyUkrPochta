@@ -29,6 +29,9 @@ namespace TestCompanyUkrPochta.Migrations
 
                     b.HasKey("id");
 
+                    b.HasIndex("NameDepartment")
+                        .IsUnique();
+
                     b.ToTable("Departments");
                 });
 
@@ -42,9 +45,12 @@ namespace TestCompanyUkrPochta.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("Surcharge")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("id");
 
-                    b.ToTable("KPIS");
+                    b.ToTable("KPI");
                 });
 
             modelBuilder.Entity("TestCompanyUkrPochta.db.Position", b =>
@@ -58,6 +64,9 @@ namespace TestCompanyUkrPochta.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("id");
+
+                    b.HasIndex("NamePosition")
+                        .IsUnique();
 
                     b.ToTable("Positions");
                 });
@@ -79,7 +88,11 @@ namespace TestCompanyUkrPochta.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("KPIid")
+                    b.Property<string>("Fatherland")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("KPIid")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
@@ -93,20 +106,19 @@ namespace TestCompanyUkrPochta.Migrations
                     b.Property<int?>("PositionId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Salary")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Surname")
-                        .IsRequired()
+                    b.Property<decimal>("Salary")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("fatherland")
+                    b.Property<string>("Surname")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("id");
 
                     b.HasIndex("DepartmentId");
+
+                    b.HasIndex("Employee_number")
+                        .IsUnique();
 
                     b.HasIndex("KPIid");
 
@@ -123,9 +135,7 @@ namespace TestCompanyUkrPochta.Migrations
 
                     b.HasOne("TestCompanyUkrPochta.db.KPI", "KPI")
                         .WithMany()
-                        .HasForeignKey("KPIid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("KPIid");
 
                     b.HasOne("TestCompanyUkrPochta.db.Position", "Position")
                         .WithMany("Worker")

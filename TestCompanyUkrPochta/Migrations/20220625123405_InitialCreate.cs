@@ -22,16 +22,17 @@ namespace TestCompanyUkrPochta.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "KPIS",
+                name: "KPI",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Grade = table.Column<string>(type: "TEXT", nullable: false)
+                    Grade = table.Column<string>(type: "TEXT", nullable: false),
+                    Surcharge = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_KPIS", x => x.id);
+                    table.PrimaryKey("PK_KPI", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -56,13 +57,13 @@ namespace TestCompanyUkrPochta.Migrations
                     Employee_number = table.Column<string>(type: "TEXT", nullable: false),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Surname = table.Column<string>(type: "TEXT", nullable: false),
-                    fatherland = table.Column<string>(type: "TEXT", nullable: false),
+                    Fatherland = table.Column<string>(type: "TEXT", nullable: false),
                     NumberPhone = table.Column<string>(type: "TEXT", nullable: false),
                     Address = table.Column<string>(type: "TEXT", nullable: false),
                     DepartmentId = table.Column<int>(type: "INTEGER", nullable: true),
                     PositionId = table.Column<int>(type: "INTEGER", nullable: true),
-                    Salary = table.Column<int>(type: "INTEGER", nullable: false),
-                    KPIid = table.Column<int>(type: "INTEGER", nullable: false)
+                    Salary = table.Column<decimal>(type: "TEXT", nullable: false),
+                    KPIid = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -73,11 +74,10 @@ namespace TestCompanyUkrPochta.Migrations
                         principalTable: "Departments",
                         principalColumn: "id");
                     table.ForeignKey(
-                        name: "FK_Workers_KPIS_KPIid",
+                        name: "FK_Workers_KPI_KPIid",
                         column: x => x.KPIid,
-                        principalTable: "KPIS",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalTable: "KPI",
+                        principalColumn: "id");
                     table.ForeignKey(
                         name: "FK_Workers_Positions_PositionId",
                         column: x => x.PositionId,
@@ -86,9 +86,27 @@ namespace TestCompanyUkrPochta.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Departments_NameDepartment",
+                table: "Departments",
+                column: "NameDepartment",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Positions_NamePosition",
+                table: "Positions",
+                column: "NamePosition",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Workers_DepartmentId",
                 table: "Workers",
                 column: "DepartmentId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Workers_Employee_number",
+                table: "Workers",
+                column: "Employee_number",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Workers_KPIid",
@@ -110,7 +128,7 @@ namespace TestCompanyUkrPochta.Migrations
                 name: "Departments");
 
             migrationBuilder.DropTable(
-                name: "KPIS");
+                name: "KPI");
 
             migrationBuilder.DropTable(
                 name: "Positions");

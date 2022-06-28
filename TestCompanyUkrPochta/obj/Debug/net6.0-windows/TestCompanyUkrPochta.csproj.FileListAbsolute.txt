@@ -51,3 +51,17 @@ C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\obj\Debug
 C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\obj\Debug\net6.0-windows\TestCompanyUkrPochta.pdb
 C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\obj\Debug\net6.0-windows\TestCompanyUkrPochta.genruntimeconfig.cache
 C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\obj\Debug\net6.0-windows\ref\TestCompanyUkrPochta.dll
+C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\obj\Debug\net6.0-windows\TestCompanyUkrPochta.Positions.resources
+C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\obj\Debug\net6.0-windows\TestCompanyUkrPochta.Depatament.resources
+C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\obj\Debug\net6.0-windows\TestCompanyUkrPochta.Add_Worker.resources
+C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\obj\Debug\net6.0-windows\TestCompanyUkrPochta.Properties.Resources.resources
+C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\obj\Debug\net6.0-windows\TestCompanyUkrPochta.Error.resources
+C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\obj\Debug\net6.0-windows\TestCompanyUkrPochta.Payments.resources
+C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\obj\Debug\net6.0-windows\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\qwerty\source\repos\TestCompanyUkrPochta\TestCompanyUkrPochta\obj\Debug\net6.0-windows\TestCompanyUkrPochta.csproj.ResolveComReference.cache
